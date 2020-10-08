@@ -1,6 +1,6 @@
 import { readFileSync } from "fs"
 import { buildSchema, parse, validate } from "graphql"
-import { generateDirectivesFile } from "../src/generateDirectivesFile"
+import { generateDirectivesFile } from "@relay-graphql-js/generate-config"
 import { RelayKnownArgumentNames } from "../src/RelayKnownArgumentNames"
 
 const schema = buildSchema(`

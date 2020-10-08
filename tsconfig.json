@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["es6", "DOM", "ES2017", "es2019", "ESNext"],
+    "module": "commonjs",
+    "declaration": true,
+    "importHelpers": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "composite": true,
+    "outDir": "dist"
+  },
+  "include": ["packages/*/src/typings/*.d.ts", "packages/*/src/**/*.ts"],
+  "exclude": ["**/*-test.ts", "**/dist/**.*"],
+  "references": [
+    {
+      "path": "packages/vscode-apollo-relay"
+    },
+    {
+      "path": "packages/graphql-config"
+    },
+    {
+      "path": "packages/validation-rules"
+    },
+    {
+      "path": "packages/generate-config"
+    }
+  ]
+}

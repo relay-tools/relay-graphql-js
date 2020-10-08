@@ -1,0 +1,8 @@
+{
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "relay-tools/relay-graphql-js" }
+  ],
+  "commit": false,
+  "access": "public"
+}

@@ -5,13 +5,5 @@
     "rootDir": "./src",
     "outDir": "./dist",
     "composite": true
-  },
-  "references": [
-    {
-      "path": "../validation-rules"
-    },
-    {
-      "path": "../generate-config"
-    }
-  ]
+  }
 }

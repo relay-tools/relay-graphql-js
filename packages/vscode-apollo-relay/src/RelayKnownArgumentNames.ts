@@ -1,4 +1,4 @@
-import {
+import type {
   DirectiveNode,
   FragmentDefinitionNode,
   FragmentSpreadNode,
@@ -7,11 +7,15 @@ import {
   ValidationContext,
   ValidationRule,
 } from "graphql"
-import { getArgumentDefinitions } from "./argumentDefinitions"
-import { defaultValidationRules, didYouMean, GraphQLError, parseType, suggestionList, visit } from "./dependencies"
-import { containsVariableNodes } from "./utils"
+import { GraphQLError, parseType, visit } from "graphql"
 
-const KnownArgumentNames = defaultValidationRules.find((rule) => rule.name.startsWith("KnownArgumentNames"))!
+import { containsVariableNodes, getArgumentDefinitions } from "@relay-graphql-js/validation-rules"
+
+import { defaultValidationRules, didYouMean, suggestionList } from "./dependencies"
+
+const KnownArgumentNames: ValidationRule = defaultValidationRules.find((rule: ValidationRule) =>
+  rule.name.startsWith("KnownArgumentNames")
+)!
 
 // tslint:disable-next-line: no-shadowed-variable
 export const RelayKnownArgumentNames: ValidationRule = function RelayKnownArgumentNames(context) {

@@ -1,0 +1,16 @@
+{
+  "name": "@relay-graphql-js/graphql-config",
+  "version": "0.0.1",
+  "description": "full graphql config for relay graphql",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "git@github.com:relay-tools/relay-graphql-js.git",
+  "author": "Rikki <rikki.schulte@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "graphql-config": ">=3.0.0"
+  },
+  "devDependencies": {
+    "graphql-config": "^3.0.3"
+  }
+}
