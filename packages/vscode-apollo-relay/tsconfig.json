@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["es6", "dom"],
+    "module": "commonjs",
+    "declaration": true,
+    "importHelpers": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
+  "include": ["src/typings/*.d.ts", "src/**/*.ts", "tests/**/*.ts"]
+}
