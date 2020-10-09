@@ -4,7 +4,12 @@
   "description": "shared validation rules for graphql-js parser",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": "git@github.com:relay-tools/relay-graphql-js.git",
+  "homepage": "https://github.com/relay-tools/relay-graphql-js/blob/main/packages/validation-rules#readme",
+  "repository": { 
+    "type": "git",
+    "url": "https://github.com/relay-tools/relay-graphql-js.git",
+    "directory": "packages/validation-rules"
+  },
   "author": "Rikki <rikki.schulte@gmail.com>",
   "license": "MIT",
   "devDependencies": {

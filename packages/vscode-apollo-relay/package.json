@@ -10,8 +10,12 @@
   ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": "https://github.com/relay-tools/vscode-apollo-relay",
-  "homepage": "https://github.com/relay-tools/vscode-apollo-relay#readme",
+  "repository": { 
+    "type": "git",
+    "url": "https://github.com/relay-tools/relay-graphql-js.git",
+    "directory": "packages/vscode-apollo-relay"
+  },
+  "homepage": "https://github.com/relay-tools/relay-graphql-js/blob/main/packages/vscode-apollo-relay#readme",
   "author": {
     "name": "Eloy Durán",
     "email": "eloy.de.enige@gmail.com",
