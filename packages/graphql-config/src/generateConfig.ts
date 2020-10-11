@@ -1,40 +1,23 @@
 import { ValidationRule } from "graphql";
-import type { GraphQLProjectConfig } from "graphql-config";
+import type { IGraphQLProject } from "graphql-config";
 
 import { generateConfig as generateConfigFromRelay } from "@relay-graphql-js/generate-config";
-import {
-  RelayArgumentsOfCorrectType,
-  RelayCompatMissingConnectionDirective,
-  RelayCompatRequiredPageInfoFields,
-  RelayDefaultValueOfCorrectType,
-  RelayKnownVariableNames,
-  RelayNoUnusedArguments,
-  RelayVariablesInAllowedPosition,
-} from "@relay-graphql-js/validation-rules";
 
-export function generateConfig(compat: boolean = false, customValidationRules: ValidationRule[] = []) {
-  const { schema, includes, excludes, includesGlobPattern, directivesFile } = generateConfigFromRelay(
-    "graphql.vscode-graphql"
+export function generateConfig(compat?: boolean, customValidationRules: ValidationRule[] = []) {
+  const { schema, include, exclude, includesGlobPattern, directivesFile, validationRules } = generateConfigFromRelay(
+    "graphql.vscode-graphql",
+    compat
   );
-  const compatOnlyRules = compat ? [RelayCompatRequiredPageInfoFields, RelayCompatMissingConnectionDirective] : [];
 
-  const config = {
+  const config: IGraphQLProject = {
     schema: [schema, directivesFile],
-    includes,
-    excludes,
-    documents: includes,
+    include,
+    exclude,
+    documents: [...include],
     extensions: {
-      customValidationRules: [
-        RelayKnownVariableNames,
-        RelayVariablesInAllowedPosition,
-        RelayArgumentsOfCorrectType,
-        RelayDefaultValueOfCorrectType,
-        RelayNoUnusedArguments,
-        ...compatOnlyRules,
-        ...customValidationRules,
-      ],
+      customValidationRules: [...validationRules, ...customValidationRules],
     },
-  } as Partial<GraphQLProjectConfig>;
+  };
 
   return { config, directivesFile, includesGlobPattern };
 }

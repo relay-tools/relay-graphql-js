@@ -1,5 +1,18 @@
 import * as path from "path";
 
+import type { loadConfig } from "relay-config";
+
+import {
+  RelayArgumentsOfCorrectType,
+  RelayCompatMissingConnectionDirective,
+  RelayCompatRequiredPageInfoFields,
+  RelayDefaultValueOfCorrectType,
+  RelayKnownArgumentNames,
+  RelayKnownVariableNames,
+  RelayNoUnusedArguments,
+  RelayVariablesInAllowedPosition,
+} from "@relay-graphql-js/validation-rules";
+
 import { loadDependencies, ModuleFilter } from "./dependencies";
 import { generateDirectivesFile } from "./generateDirectivesFile";
 
@@ -8,9 +21,11 @@ const DEFAULTS = {
   src: "./src",
 };
 
-export function generateConfig(moduleFilter: ModuleFilter) {
+type TRelayConfig = ReturnType<typeof loadConfig>;
+
+export function generateConfig(moduleFilter: ModuleFilter, compat: boolean = false) {
   const { RelayCompilerMain, RelayConfig } = loadDependencies(moduleFilter);
-  function loadRelayConfig() {
+  function loadRelayConfig(): typeof RelayConfig {
     if (!RelayConfig) {
       console.log("User has not installed relay-config, so needs manual configuration.");
       return null;
@@ -31,10 +46,10 @@ export function generateConfig(moduleFilter: ModuleFilter) {
       RelayCompilerMain && RelayCompilerMain.getLanguagePlugin((relayConfig && relayConfig.language) || "javascript");
     return languagePlugin ? languagePlugin.inputExtensions : ["js", "jsx"];
   }
-  const relayConfig = loadRelayConfig();
+  const relayConfig: TRelayConfig = loadRelayConfig();
   const extensions = getInputExtensions(relayConfig);
   const directivesFile = generateDirectivesFile();
-  // const compatOnlyRules = compat ? [RelayCompatRequiredPageInfoFields, RelayCompatMissingConnectionDirective] : []
+  const compatOnlyRules = compat ? [RelayCompatRequiredPageInfoFields, RelayCompatMissingConnectionDirective] : [];
 
   const includesGlobPattern = (inputExtensions: string[]) => `**/*.{graphql,${inputExtensions.join(",")}}`;
 
@@ -43,9 +58,20 @@ export function generateConfig(moduleFilter: ModuleFilter) {
     directivesFile,
     extensions,
     includesGlobPattern,
-    includes: [directivesFile, path.join((relayConfig || DEFAULTS).src, includesGlobPattern(extensions))],
-    excludes: relayConfig ? relayConfig.exclude : [],
+    include: [path.join((relayConfig || DEFAULTS).src, includesGlobPattern(extensions))],
+    exclude: relayConfig ? relayConfig.exclude : [],
     relayConfig,
     DEFAULTS,
+    validationRules: [
+      ...compatOnlyRules,
+      RelayArgumentsOfCorrectType,
+      RelayCompatMissingConnectionDirective,
+      RelayCompatRequiredPageInfoFields,
+      RelayDefaultValueOfCorrectType,
+      RelayKnownVariableNames,
+      RelayNoUnusedArguments,
+      RelayVariablesInAllowedPosition,
+      RelayKnownArgumentNames,
+    ],
   };
 }
