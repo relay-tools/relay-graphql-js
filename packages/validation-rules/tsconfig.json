@@ -5,10 +5,5 @@
     "rootDir": "./src",
     "outDir": "./dist",
     "composite": true
-  },
-  "references": [
-    {
-      "path": "../generate-config"
-    }
-  ]
+  }
 }

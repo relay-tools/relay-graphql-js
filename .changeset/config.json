@@ -4,5 +4,6 @@
     { "repo": "relay-tools/relay-graphql-js" }
   ],
   "commit": false,
-  "access": "public"
+  "access": "public",
+  "baseBranch": "main"
 }

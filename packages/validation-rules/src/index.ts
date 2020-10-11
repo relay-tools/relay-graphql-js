@@ -2,6 +2,7 @@ export { RelayArgumentsOfCorrectType } from "./RelayArgumentsOfCorrectType";
 export { RelayCompatMissingConnectionDirective } from "./RelayCompatMissingConnectionDirective";
 export { RelayCompatRequiredPageInfoFields } from "./RelayCompatRequiredPageInfoFields";
 export { RelayDefaultValueOfCorrectType } from "./RelayDefaultValueOfCorrectType";
+export { RelayKnownArgumentNames } from "./RelayKnownArgumentNames";
 export { RelayKnownVariableNames } from "./RelayKnownVariableNames";
 export { RelayNoUnusedArguments } from "./RelayNoUnusedArguments";
 export { RelayVariablesInAllowedPosition } from "./RelayVariablesInAllowedPosition";

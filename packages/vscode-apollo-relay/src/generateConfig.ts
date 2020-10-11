@@ -2,18 +2,8 @@ import type { ApolloConfigFormat } from "apollo-language-server/lib/config"
 import type { ValidationRule } from "graphql"
 
 import { generateConfig as generateConfigFromRelay } from "@relay-graphql-js/generate-config"
-import {
-  RelayArgumentsOfCorrectType,
-  RelayCompatMissingConnectionDirective,
-  RelayCompatRequiredPageInfoFields,
-  RelayDefaultValueOfCorrectType,
-  RelayKnownVariableNames,
-  RelayNoUnusedArguments,
-  RelayVariablesInAllowedPosition,
-} from "@relay-graphql-js/validation-rules"
 
-import { defaultValidationRules } from "./dependencies"
-import { RelayKnownArgumentNames } from "./RelayKnownArgumentNames"
+import { defaultValidationRules, extensionId } from "./dependencies"
 
 const ValidationRulesToExcludeForRelay = [
   "KnownArgumentNames",
@@ -23,10 +13,10 @@ const ValidationRulesToExcludeForRelay = [
 ]
 
 export function generateConfig(compat: boolean = false) {
-  const { schema, includes, excludes, includesGlobPattern, directivesFile } = generateConfigFromRelay(
-    "apollographql.vscode-apollo"
+  const { schema, include, exclude, includesGlobPattern, directivesFile, validationRules } = generateConfigFromRelay(
+    extensionId,
+    compat
   )
-  const compatOnlyRules = compat ? [RelayCompatRequiredPageInfoFields, RelayCompatMissingConnectionDirective] : []
 
   const config: ApolloConfigFormat = {
     client: {
@@ -35,19 +25,13 @@ export function generateConfig(compat: boolean = false) {
         localSchemaFile: schema,
       },
       validationRules: [
-        RelayKnownArgumentNames,
-        RelayKnownVariableNames,
-        RelayVariablesInAllowedPosition,
-        RelayArgumentsOfCorrectType,
-        RelayDefaultValueOfCorrectType,
-        RelayNoUnusedArguments,
-        ...compatOnlyRules,
+        ...validationRules,
         ...defaultValidationRules.filter(
           (rule: ValidationRule) => !ValidationRulesToExcludeForRelay.some((name) => rule.name.startsWith(name))
         ),
       ],
-      includes,
-      excludes,
+      includes: [...include, directivesFile],
+      excludes: exclude,
       tagName: "graphql",
     },
   }

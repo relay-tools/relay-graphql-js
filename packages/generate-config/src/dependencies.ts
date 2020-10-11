@@ -4,7 +4,6 @@
  * e.g. graphql-js parts come from different modules (i.e. the user's node_modules).
  */
 
-import * as _ApolloValidation from "apollo-language-server/lib/errors/validation";
 import * as _GraphQL from "graphql";
 import * as _RelayCompilerMain from "relay-compiler/lib/bin/RelayCompilerMain";
 import * as _RelayConfig from "relay-config";
@@ -54,13 +53,6 @@ export const loadDependencies = (moduleFilter: ModuleFilter, loadAdditional?: (m
     TypeInfo,
   } = mod.require("graphql") as typeof _GraphQL;
 
-  const didYouMean = mod.require("graphql/jsutils/didYouMean").default as (suggestions: string[]) => string;
-
-  const suggestionList = mod.require("graphql/jsutils/suggestionList").default as (
-    input: string,
-    options: string[]
-  ) => string[];
-
   let relayConfigMod: typeof _RelayConfig | null = null;
   try {
     // tslint:disable-next-line: no-var-requires
@@ -87,8 +79,6 @@ export const loadDependencies = (moduleFilter: ModuleFilter, loadAdditional?: (m
   const RelayCompilerMain = relayCompilerMainMod;
   return {
     ...(loadAdditional ? loadAdditional(mod) : {}),
-    didYouMean,
-    suggestionList,
     RelayConfig,
     RelayCompilerMain,
     BREAK,
