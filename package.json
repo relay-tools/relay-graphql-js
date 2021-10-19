@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.11.0",
-    "@types/jest": "^26.0.14",
+    "@types/jest": "26.0.24",
     "@types/node": "^12.7.4",
     "@types/relay-compiler": "^8.0.0",
     "@types/relay-config": "^6.0.0",
