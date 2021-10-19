@@ -1252,10 +1252,10 @@
     graphql "^14.5.3"
     typescript "^3.0.0"
 
-"@types/relay-config@^6.0.0":
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/@types/relay-config/-/relay-config-6.0.1.tgz#e6217ca868ea01d9da167b5836ddce1ec5241e89"
-  integrity sha512-b1CmrbXl0qfk3lsBpOT6Hk6N2/+ZbIbu1wfgS4EsMulpOeOeI5CeoKGHJFImhQyJmL1v+PtPX0cusXj0Cb0uMA==
+"@types/relay-config@6.0.2":
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/@types/relay-config/-/relay-config-6.0.2.tgz#5e9578ae152ed76dcc9bcaf6fbf09c57a7439760"
+  integrity sha512-oW5GhI0Yx2WHtk/ByOkmZSMbRg7kkgvhN7+4K6BeLvIatc7dSR4CN3a5dffZbePMaVmdiNbXSO+AnrEQ2AdNLA==
   dependencies:
     "@types/relay-compiler" "*"
 
