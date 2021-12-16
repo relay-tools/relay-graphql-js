@@ -25,7 +25,7 @@ function moduleFromDependencyModules(moduleFilter: ModuleFilter) {
   let mod = module;
   if (typeof jest === "undefined") {
     while (filterModules(mod, moduleFilter)) {
-      mod = mod.parent!;
+      mod = Object.values(require.cache).filter((m) => m.children.includes(module))[0] ?? null;
     }
     if (mod === null) {
       throw new Error(`Unable to find ${moduleFilter}'s node_modules`);
