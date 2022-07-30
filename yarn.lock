@@ -1470,7 +1470,7 @@ apollo-graphql@^0.6.0:
     apollo-env "^0.6.5"
     lodash.sortby "^4.7.0"
 
-apollo-language-server@^1.23.4:
+apollo-language-server@1.24.0:
   version "1.24.0"
   resolved "https://registry.yarnpkg.com/apollo-language-server/-/apollo-language-server-1.24.0.tgz#502382c344e01eeffdfc3051e5511cc5244e3725"
   integrity sha512-n1o1QmQ6hQcl5Rx+K23yO9MrDcF94Xygychn1pxJG5xKEZ8kkKxqNqjUhjFxIN908LJ4yuFjTW6OEtEym4haxg==
