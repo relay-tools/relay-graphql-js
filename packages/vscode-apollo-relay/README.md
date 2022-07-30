@@ -10,6 +10,7 @@ Features:
 - Read all user configuration from [relay-config], if the project is setup with it.
 - Provides definitions for all Relay directives for validation and auto-completion purposes.
 - Provides validation of `@argumentDefinitions` and `@arguments` directives.
+- uses your locally installed `graphql` version!
 
 [Changelog](https://github.com/relay-tools/vscode-apollo-relay/blob/master/CHANGELOG.md)
 
