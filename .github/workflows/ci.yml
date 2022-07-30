@@ -13,8 +13,10 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@master
 
-      - name: Setup Node.js 18.x
-        uses: actions/setup-node@master
+      - name: Setup Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
 
       - name: Install Dependencies
         run: yarn
