@@ -59,7 +59,7 @@ module.exports = {
 }
 ```
 
-### Compat
+### Compatibility
 
 If you are still using the compatibility mode of Relay you can enable additional validation rules that only apply to Relay compat. `generateConfig` takes a `compat` boolean argument to enable these extra validation rules. Ie:
 

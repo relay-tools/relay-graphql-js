@@ -1,7 +1,7 @@
 {
   "name": "@relay-graphql-js/graphql-config",
   "version": "0.1.0",
-  "description": "full graphql config for relay graphql",
+  "description": "graphql-config compatibility layer for your relay project",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "homepage": "https://github.com/relay-tools/relay-graphql-js/blob/main/packages/graphql-config#readme",
@@ -17,5 +17,6 @@
   },
   "devDependencies": {
     "graphql-config": "^3.0.3"
-  }
+  },
+  "keywords": ["graphql", "relay", "graphql-config", "vscode-graphql"]
 }

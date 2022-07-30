@@ -3,14 +3,15 @@
 [![npm](https://img.shields.io/npm/v/vscode-apollo-relay.svg)](https://www.npmjs.com/package/vscode-apollo-relay)
 [![build](https://img.shields.io/travis/relay-tools/vscode-apollo-relay/master.svg)](https://travis-ci.org/relay-tools/vscode-apollo-relay/builds)
 
-Simple configuration for [`graphql-config`](https://graphql-config.com) compatibility for Relay projects.
+This provides a simple configuration to may relay config to [`graphql-config`](https://graphql-config.com).
 
 Features:
 
-- Read all user configuration from [relay-config], if the project is setup with it.
+- Reads user configuration from [relay-config], if the project is setup with it.
 - Provides definitions for all Relay directives for validation and auto-completion purposes.
 - Provides validation of `@argumentDefinitions` and `@arguments` directives.
 - uses your locally installed `graphql` version!
+- multiple environments are not supported yet but are coming soon!
 
 [Changelog](https://github.com/relay-tools/relay-graphql-js/blob/master/packages/graphql-config/CHANGELOG.md)
 
@@ -42,6 +43,12 @@ Or, in your `graphql.config.js` file:
 const { config } = require("@relay-graphql-js/graphql-config").generateConfig()
 module.exports = config
 ```
+
+
+## Why you might want to use this
+
+Simply for tooling interoperability, if nothing else.
+
 
 ## Limitations
 
