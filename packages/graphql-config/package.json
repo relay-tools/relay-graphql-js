@@ -1,11 +1,11 @@
 {
   "name": "@relay-graphql-js/graphql-config",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "full graphql config for relay graphql",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "homepage": "https://github.com/relay-tools/relay-graphql-js/blob/main/packages/graphql-config#readme",
-  "repository": { 
+  "repository": {
     "type": "git",
     "url": "https://github.com/relay-tools/relay-graphql-js.git",
     "directory": "packages/graphql-config"

@@ -1,11 +1,11 @@
 {
   "name": "@relay-graphql-js/validation-rules",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "shared validation rules for graphql-js parser",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "homepage": "https://github.com/relay-tools/relay-graphql-js/blob/main/packages/validation-rules#readme",
-  "repository": { 
+  "repository": {
     "type": "git",
     "url": "https://github.com/relay-tools/relay-graphql-js.git",
     "directory": "packages/validation-rules"
@@ -13,7 +13,7 @@
   "author": "Rikki <rikki.schulte@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@relay-graphql-js/generate-config": "^0.0.1"
+    "@relay-graphql-js/generate-config": "^0.1.0"
   },
   "peerDependencies": {
     "graphql": ">= 14 < 16"

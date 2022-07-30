@@ -1,11 +1,11 @@
 {
   "name": "@relay-graphql-js/generate-config",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "shared relay utilities for graphql-js compatible parsers",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "homepage": "https://github.com/relay-tools/relay-graphql-js/blob/main/packages/generate-config#readme",
-  "repository": { 
+  "repository": {
     "type": "git",
     "url": "https://github.com/relay-tools/relay-graphql-js.git",
     "directory": "packages/generate-config"
@@ -17,6 +17,6 @@
     "relay-config": ">=5.0.0"
   },
   "dependencies": {
-    "@relay-graphql-js/validation-rules": "^0.0.1"
+    "@relay-graphql-js/validation-rules": "^0.1.0"
   }
 }
