@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/v/vscode-apollo-relay.svg)](https://www.npmjs.com/package/vscode-apollo-relay)
 [![build](https://img.shields.io/travis/relay-tools/vscode-apollo-relay/master.svg)](https://travis-ci.org/relay-tools/vscode-apollo-relay/builds)
 
-Simple configuration for [`graphql-config`](https://graphql-config.com) compatibility for Relay projects. 
+Simple compatibility layer for transforming [`graphql-config`](https://graphql-config.com) to relay config format. 
 
 Features:
 
