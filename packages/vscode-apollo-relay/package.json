@@ -1,7 +1,7 @@
 {
   "name": "vscode-apollo-relay",
   "version": "1.6.0",
-  "description": "Simple configuration of vscode-apollo for Relay projects.",
+  "description": "Compatibility layer to use relay config with vscode-apollo and other apollo config tools",
   "keywords": [
     "apollo",
     "graphql",
