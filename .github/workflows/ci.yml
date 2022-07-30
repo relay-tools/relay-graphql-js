@@ -1,22 +1,22 @@
 name: CI
 
-on: [push, pull_request]
+on: push
 
 jobs:
-  release:
+  build-test:
     name: CI Build & Test
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: ['14', '16', '17', '18', '20']
+        node-version: [ current, lts/*, lts/-1, lts/-2 ]
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js ${{ matrix.node }}
+      - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node }}
+          node-version: ${{ matrix.node-version }}
 
       - name: Install Dependencies
         run: yarn
