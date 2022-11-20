@@ -23,7 +23,7 @@
     "@changesets/cli": "^2.24.1",
     "@changesets/changelog-github": "^0.4.6",
     "@types/jest": "^26.0.14",
-    "@types/node": "^12.7.4",
+    "@types/node": "^18.0.0",
     "@types/relay-compiler": "^8.0.0",
     "@types/relay-config": "^6.0.0",
     "graphql": "^15.3.0",
