@@ -5840,9 +5840,7 @@ regexp.prototype.flags@^1.4.3:
     functions-have-names "^1.2.2"
 
 relay-compiler-language-typescript@^13.0.1:
-  version "13.0.1"
-  resolved "https://registry.yarnpkg.com/relay-compiler-language-typescript/-/relay-compiler-language-typescript-13.0.1.tgz#f2a9875b9d06361fbc7dd0a50951819daf161a4e"
-  integrity sha512-ClOR5GnkBREHiM5N/T21GrjZHe+DWQ7ymZfmCfz4ATUtUDDyznHutE6dNAVgx8ebyMNujEuGHkH2Yj/ux6StdA==
+  version "13.0.10"
   dependencies:
     immutable "^4.0.0-rc.12"
     invariant "^2.2.4"
