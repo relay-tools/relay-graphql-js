@@ -1284,7 +1284,12 @@
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.1.1.tgz#be148756d5480a84cde100324c03a86ae5739fb5"
   integrity sha512-2zs+O+UkDsJ1Vcp667pd3f8xearMdopz/z54i99wtRDI5KLmngk7vlrYZD0ZjKHaROR03EznlBbVY9PfAEyJIQ==
 
-"@types/relay-compiler@*", "@types/relay-compiler@^8.0.0":
+"@types/relay-compiler@*":
+  version "14.0.4"
+  resolved "https://registry.yarnpkg.com/@types/relay-compiler/-/relay-compiler-14.0.4.tgz#df9922e836bbef4f6995c0689a86a6c79c559bf2"
+  integrity sha512-f6TWNTMDXtVvJIJGlOPPqJL5iFPwevNdqq5O4RAB47ideCEl2LH0qrxCESRt0Aam9hRUpy0a8lyYMUSSgWc8jg==
+
+"@types/relay-compiler@^8.0.0":
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/@types/relay-compiler/-/relay-compiler-8.0.0.tgz#98961b923555145067d3895f8774f3024f14e6fa"
   integrity sha512-rSR62gfhm2ZZp888RK93/jODOCA1j2MpWr5ibZEyYprmVG1G9KE5TfNUERCcc9z58F4d8tMIX00ZpBOU1sWcDA==
@@ -1294,16 +1299,16 @@
     typescript "^3.0.0"
 
 "@types/relay-config@^6.0.0":
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/@types/relay-config/-/relay-config-6.0.1.tgz#e6217ca868ea01d9da167b5836ddce1ec5241e89"
-  integrity sha512-b1CmrbXl0qfk3lsBpOT6Hk6N2/+ZbIbu1wfgS4EsMulpOeOeI5CeoKGHJFImhQyJmL1v+PtPX0cusXj0Cb0uMA==
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/@types/relay-config/-/relay-config-6.0.2.tgz#5e9578ae152ed76dcc9bcaf6fbf09c57a7439760"
+  integrity sha512-oW5GhI0Yx2WHtk/ByOkmZSMbRg7kkgvhN7+4K6BeLvIatc7dSR4CN3a5dffZbePMaVmdiNbXSO+AnrEQ2AdNLA==
   dependencies:
     "@types/relay-compiler" "*"
 
 "@types/relay-runtime@*":
-  version "10.0.4"
-  resolved "https://registry.yarnpkg.com/@types/relay-runtime/-/relay-runtime-10.0.4.tgz#b3b70eb07b5c851fc5d7feffa5fc79cbda79831f"
-  integrity sha512-PqmnynswPz5STanyPI6rjfW2ZdLju9scm5DQWFRJXC/WtKJNggyBMDQlMbTp5Sq1/5nIcP6Z7DK+Mrod9wNo9g==
+  version "20.1.1"
+  resolved "https://registry.yarnpkg.com/@types/relay-runtime/-/relay-runtime-20.1.1.tgz#ab053a12a890a7c00c3bd77ea3831d70f7095b88"
+  integrity sha512-loM2iJteknnJcsxrynmBVb7pIDkSkJUuCMnAa/oDFcrvaxkDvq8iy0J2UshMdDy14iJJocDblXeAu7c6Q1+Ucw==
 
 "@types/semver@^6.0.0":
   version "6.2.2"
@@ -6875,9 +6880,9 @@ typedarray@^0.0.6:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 typescript@^3.0.0:
-  version "3.9.7"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
-  integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
+  version "3.9.10"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.10.tgz#70f3910ac7a51ed6bef79da7800690b19bf778b8"
+  integrity sha512-w6fIxVE/H1PkLKcCPsFqKE7Kv7QUwhU8qQY2MueZXWx5cPZdwFupLgKK3vntcK98BtNHZtAF4LA/yl2a7k8R6Q==
 
 typescript@^4.0.3:
   version "4.0.3"
