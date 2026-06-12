@@ -16,7 +16,7 @@
     "@relay-graphql-js/generate-config": "^0.1.0"
   },
   "peerDependencies": {
-    "graphql": ">= 14 < 16"
+    "graphql": ">= 14 < 17"
   },
   "keywords": ["relay", "graphql", "graphql-js", "validation"]
 }
