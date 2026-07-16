@@ -3622,9 +3622,9 @@ ignore@^5.1.4:
   integrity sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==
 
 immutable@^4.0.0-rc.12:
-  version "4.0.0-rc.12"
-  resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.0.0-rc.12.tgz#ca59a7e4c19ae8d9bf74a97bdf0f6e2f2a5d0217"
-  integrity sha512-0M2XxkZLx/mi3t8NVwIm1g8nHoEmM9p9UBl/G9k4+hm0kBgOVdMV/B3CY5dQ8qG8qc80NN4gDV4HQv6FTJ5q7A==
+  version "4.3.9"
+  resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.3.9.tgz#c98349e05e9c6e2a4d8fe88ac0b363e0d536b544"
+  integrity sha512-ObHy4YN7ycwZOUCLI1/6svfyAFu7vL8RhAvVu/bh/RZW9EPlOyDaQ9jDQWCtdqzaXUjgXZCW1migtHE7YI7UGQ==
 
 immutable@~3.7.6:
   version "3.7.6"
@@ -5840,9 +5840,9 @@ regexp.prototype.flags@^1.4.3:
     functions-have-names "^1.2.2"
 
 relay-compiler-language-typescript@^13.0.1:
-  version "13.0.1"
-  resolved "https://registry.yarnpkg.com/relay-compiler-language-typescript/-/relay-compiler-language-typescript-13.0.1.tgz#f2a9875b9d06361fbc7dd0a50951819daf161a4e"
-  integrity sha512-ClOR5GnkBREHiM5N/T21GrjZHe+DWQ7ymZfmCfz4ATUtUDDyznHutE6dNAVgx8ebyMNujEuGHkH2Yj/ux6StdA==
+  version "13.0.10"
+  resolved "https://registry.yarnpkg.com/relay-compiler-language-typescript/-/relay-compiler-language-typescript-13.0.10.tgz#1b80fc6fe1f398a3706a12e3493165b3e0a59800"
+  integrity sha512-JFEjaYX3Jb3OQcMnrcCNNMQG5hjs8UpvtrrDGcv6Lnj0SMI9LhAg8NHJOWR3JOVdEVINA02mU5Cfw4VicH5USA==
   dependencies:
     immutable "^4.0.0-rc.12"
     invariant "^2.2.4"
